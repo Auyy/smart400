@@ -12,7 +12,7 @@ namespace Smart400.Repositories
 {
     public class AppSettingRepository
     {
-        private string fileContents = File.ReadAllText(@"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt");
+        //private string fileContents = File.ReadAllText(@"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt");
 
         public AppSettingRepository()
         {
@@ -32,28 +32,54 @@ namespace Smart400.Repositories
         {
             var texts = @"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt";
             //var linesReverse = texts.Reverse().ToList();
-            return texts.Reverse().Select(index => new AppSettingModel
+            return texts.Select(index => new AppSettingModel
             {
-                LogsAs400Path = File.ReadAllText(texts)
+                TextSmart = File.ReadAllText(texts)
+            });
 
-            }).ToList();
-           
         }
 
-        //public IEnumerable<AppSettingModel> GetAll()
+        //public IEnumerable<AppSettingModel> Get()
         //{
-        //    var models = new List<AppSettingModel>();
-        //    using (TextReader db = new StreamReader(fileContents))
-        //    {
-        //        var text = db.ReadLine();
-        //        var linesReverse = text.Reverse().ToList();
-        //    }
 
-        //    return linesReverse;
+        //    var appSettingFullpath = "fileAppSetting.txt";
+        //    var appSetting = ReadFileAppSetting(appSettingFullpath);
+        //    //var curCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+        //    var dateToday = DateTime.Now.ToString("yyyyMMdd");
+        //    var pathFileLog400 = appSetting.LogsAs400Path;
+        //    var filenameLogToday = $"{appSetting.FileNameLogsAs400}{dateToday}.txt";
+        //    var logFile = Path.Combine(pathFileLog400, filenameLogToday);
+
+        //    appSetting.LastUpdate = DateTime.Now;
+        //    var AppSettingJsonStr = JsonSerializer.Serialize(appSetting);
+        //    File.WriteAllText(appSettingFullpath, AppSettingJsonStr);
+        //    //var texts = "fileAppSetting.txt";
+        //    //var linesReverse = texts.Reverse().ToList();
+        //    return logFile.Select(index => new AppSettingModel
+        //    {
+        //        TextSmart = File.ReadAllText(logFile)
+        //    });
+
+
+        //}
+
+        //private static AppSettingModel ReadFileAppSetting(string filepath)
+        //{
+        //    //read json appsetting
+        //    if (!File.Exists(filepath))
+        //    {
+        //        return null;
+        //    }
+        //    else
+        //    {
+        //        var texts = File.ReadAllText(filepath);
+
+        //        var model = JsonSerializer.Deserialize<AppSettingModel>(texts);
+        //        return model;
+        //    }
         //}
 
 
-       
 
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tangkwa/Desktop/AS400Status/Smart400/Smart400/Smart400.csproj": {}
+    "/Users/tangkwa/Desktop/lab/smart400/Smart400/Smart400/Smart400.csproj": {}
   },
   "projects": {
-    "/Users/tangkwa/Desktop/AS400Status/Smart400/Smart400/Smart400.csproj": {
+    "/Users/tangkwa/Desktop/lab/smart400/Smart400/Smart400/Smart400.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tangkwa/Desktop/AS400Status/Smart400/Smart400/Smart400.csproj",
+        "projectUniqueName": "/Users/tangkwa/Desktop/lab/smart400/Smart400/Smart400/Smart400.csproj",
         "projectName": "Smart400",
-        "projectPath": "/Users/tangkwa/Desktop/AS400Status/Smart400/Smart400/Smart400.csproj",
+        "projectPath": "/Users/tangkwa/Desktop/lab/smart400/Smart400/Smart400/Smart400.csproj",
         "packagesPath": "/Users/tangkwa/.nuget/packages/",
-        "outputPath": "/Users/tangkwa/Desktop/AS400Status/Smart400/Smart400/obj/",
+        "outputPath": "/Users/tangkwa/Desktop/lab/smart400/Smart400/Smart400/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tangkwa/.config/NuGet/NuGet.Config"
