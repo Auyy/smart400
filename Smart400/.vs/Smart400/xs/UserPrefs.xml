@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{9852F5A5-65A7-4EF1-8D0A-18582FA03880}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/ApiControllers/AppSettingApiController.cs">
+    <Files>
+      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="39" Column="25" />
+      <File FileName="Smart400/Services/AppSettingService.cs" Line="20" Column="46" />
+      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" Line="37" Column="44" />
+      <File FileName="Smart400/fileAppSetting.txt" Line="3" Column="45" />
+      <File FileName="Smart400/Controllers/HomeController.cs" />
+      <File FileName="Smart400/Views/Home/Index.cshtml" />
+      <File FileName="Smart400/Models/AppSettingModel.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Smart400" expanded="True">
+            <Node name="Smart400" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="ApiControllers" expanded="True">
+                <Node name="AppSettingApiController.cs" selected="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Smart400 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

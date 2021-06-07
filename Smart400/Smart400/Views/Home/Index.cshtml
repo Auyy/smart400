@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Smart400.Models.AppSettingModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Smart400
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LogsAs400Path)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,223 @@
+24/5/2564 5:53:30 : Wait Order : 5000 mSec. 
+24/5/2564 5:53:36 : Wait Order : 5000 mSec. 
+24/5/2564 5:53:41 : Wait Order : 5000 mSec. 
+24/5/2564 5:53:47 : Wait Order : 5000 mSec. 
+24/5/2564 5:53:53 : Wait Order : 5000 mSec. 
+24/5/2564 5:53:58 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:04 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:10 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:15 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:21 : AS400FreshLogin
+24/5/2564 5:54:21 : Find Msg : Access
+24/5/2564 5:54:21 : Press Key : Enter for Skip
+24/5/2564 5:54:21 : Find Msg : Access
+24/5/2564 5:54:21 : Press Key : Enter for Skip
+24/5/2564 5:54:21 : Find Msg : Access
+24/5/2564 5:54:21 : Press Key : Enter for Skip
+24/5/2564 5:54:23 : Find Msg : Access
+24/5/2564 5:54:23 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:29 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:35 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:40 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:46 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:52 : Wait Order : 5000 mSec. 
+24/5/2564 5:54:57 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:03 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:09 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:14 : AS400FreshLogin
+24/5/2564 5:55:15 : Find Msg : Access
+24/5/2564 5:55:15 : Press Key : Enter for Skip
+24/5/2564 5:55:15 : Find Msg : Access
+24/5/2564 5:55:15 : Press Key : Enter for Skip
+24/5/2564 5:55:15 : Find Msg : Access
+24/5/2564 5:55:15 : Press Key : Enter for Skip
+24/5/2564 5:55:16 : Find Msg : Access
+24/5/2564 5:55:17 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:22 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:28 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:34 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:39 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:45 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:51 : Wait Order : 5000 mSec. 
+24/5/2564 5:55:56 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:02 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:08 : AS400FreshLogin
+24/5/2564 5:56:08 : Find Msg : Access
+24/5/2564 5:56:08 : Press Key : Enter for Skip
+24/5/2564 5:56:08 : Find Msg : Access
+24/5/2564 5:56:08 : Press Key : Enter for Skip
+24/5/2564 5:56:08 : Find Msg : Access
+24/5/2564 5:56:08 : Press Key : Enter for Skip
+24/5/2564 5:56:09 : Find Msg : Access
+24/5/2564 5:56:10 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:16 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:22 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:27 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:33 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:39 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:44 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:50 : Wait Order : 5000 mSec. 
+24/5/2564 5:56:56 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:01 : AS400FreshLogin
+24/5/2564 5:57:02 : Find Msg : Access
+24/5/2564 5:57:02 : Press Key : Enter for Skip
+24/5/2564 5:57:02 : Find Msg : Access
+24/5/2564 5:57:02 : Press Key : Enter for Skip
+24/5/2564 5:57:02 : Find Msg : Access
+24/5/2564 5:57:02 : Press Key : Enter for Skip
+24/5/2564 5:57:03 : Find Msg : Access
+24/5/2564 5:57:04 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:09 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:15 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:21 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:26 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:32 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:38 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:43 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:49 : Wait Order : 5000 mSec. 
+24/5/2564 5:57:55 : AS400FreshLogin
+24/5/2564 5:57:55 : Find Msg : Access
+24/5/2564 5:57:55 : Press Key : Enter for Skip
+24/5/2564 5:57:55 : Find Msg : Access
+24/5/2564 5:57:55 : Press Key : Enter for Skip
+24/5/2564 5:57:55 : Find Msg : Access
+24/5/2564 5:57:55 : Press Key : Enter for Skip
+24/5/2564 5:57:56 : Find Msg : Access
+24/5/2564 5:57:57 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:03 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:08 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:14 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:20 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:25 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:31 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:37 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:42 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:48 : AS400FreshLogin
+24/5/2564 5:58:48 : Find Msg : Access
+24/5/2564 5:58:48 : Press Key : Enter for Skip
+24/5/2564 5:58:48 : Find Msg : Access
+24/5/2564 5:58:48 : Press Key : Enter for Skip
+24/5/2564 5:58:49 : Find Msg : Access
+24/5/2564 5:58:49 : Press Key : Enter for Skip
+24/5/2564 5:58:50 : Find Msg : Access
+24/5/2564 5:58:51 : Wait Order : 5000 mSec. 
+24/5/2564 5:58:56 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:02 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:08 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:13 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:19 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:25 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:30 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:36 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:42 : AS400FreshLogin
+24/5/2564 5:59:42 : Find Msg : Access
+24/5/2564 5:59:42 : Press Key : Enter for Skip
+24/5/2564 5:59:42 : Find Msg : Access
+24/5/2564 5:59:42 : Press Key : Enter for Skip
+24/5/2564 5:59:42 : Find Msg : Access
+24/5/2564 5:59:42 : Press Key : Enter for Skip
+24/5/2564 5:59:43 : Find Msg : Access
+24/5/2564 5:59:44 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:50 : Wait Order : 5000 mSec. 
+24/5/2564 5:59:55 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:01 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:07 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:12 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:18 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:24 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:29 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:35 : AS400FreshLogin
+24/5/2564 6:00:35 : Find Msg : Access
+24/5/2564 6:00:35 : Press Key : Enter for Skip
+24/5/2564 6:00:35 : Find Msg : Access
+24/5/2564 6:00:35 : Press Key : Enter for Skip
+24/5/2564 6:00:35 : Find Msg : Access
+24/5/2564 6:00:35 : Press Key : Enter for Skip
+24/5/2564 6:00:37 : Find Msg : Access
+24/5/2564 6:00:37 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:43 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:49 : Wait Order : 5000 mSec. 
+24/5/2564 6:00:54 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:00 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:06 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:11 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:17 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:23 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:28 : AS400FreshLogin
+24/5/2564 6:01:29 : Find Msg : Access
+24/5/2564 6:01:29 : Press Key : Enter for Skip
+24/5/2564 6:01:29 : Find Msg : Access
+24/5/2564 6:01:29 : Press Key : Enter for Skip
+24/5/2564 6:01:29 : Find Msg : Access
+24/5/2564 6:01:29 : Press Key : Enter for Skip
+24/5/2564 6:01:30 : Find Msg : Access
+24/5/2564 6:01:31 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:36 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:42 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:48 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:53 : Wait Order : 5000 mSec. 
+24/5/2564 6:01:59 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:05 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:10 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:16 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:22 : AS400FreshLogin
+24/5/2564 6:02:22 : Find Msg : Access
+24/5/2564 6:02:22 : Press Key : Enter for Skip
+24/5/2564 6:02:22 : Find Msg : Access
+24/5/2564 6:02:22 : Press Key : Enter for Skip
+24/5/2564 6:02:22 : Find Msg : Access
+24/5/2564 6:02:22 : Press Key : Enter for Skip
+24/5/2564 6:02:23 : Find Msg : Access
+24/5/2564 6:02:24 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:30 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:36 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:41 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:47 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:53 : Wait Order : 5000 mSec. 
+24/5/2564 6:02:58 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:04 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:10 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:15 : AS400FreshLogin
+24/5/2564 6:03:16 : Find Msg : Access
+24/5/2564 6:03:16 : Press Key : Enter for Skip
+24/5/2564 6:03:16 : Find Msg : Access
+24/5/2564 6:03:16 : Press Key : Enter for Skip
+24/5/2564 6:03:16 : Find Msg : Access
+24/5/2564 6:03:16 : Press Key : Enter for Skip
+24/5/2564 6:03:17 : Find Msg : Access
+24/5/2564 6:03:18 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:23 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:29 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:35 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:40 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:46 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:52 : Wait Order : 5000 mSec. 
+24/5/2564 6:03:57 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:03 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:09 : AS400FreshLogin
+24/5/2564 6:04:09 : Find Msg : Access
+24/5/2564 6:04:09 : Press Key : Enter for Skip
+24/5/2564 6:04:09 : Find Msg : Access
+24/5/2564 6:04:09 : Press Key : Enter for Skip
+24/5/2564 6:04:09 : Find Msg : Access
+24/5/2564 6:04:09 : Press Key : Enter for Skip
+24/5/2564 6:04:10 : Find Msg : Access
+24/5/2564 6:04:11 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:17 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:23 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:28 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:34 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:40 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:45 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:51 : Wait Order : 5000 mSec. 
+24/5/2564 6:04:57 : Wait Order : 5000 mSec. 
+24/5/2564 6:05:02 : AS400FreshLogin
+24/5/2564 6:05:03 : Find Msg : Access
+24/5/2564 6:05:03 : Press Key : Enter for Skip
+24/5/2564 6:05:03 : Find Msg : Access
+24/5/2564 6:05:03 : Press Key : Enter for Skip
+24/5/2564 6:05:03 : Find Msg : Access
+24/5/2564 6:05:03 : Press Key : Enter for Skip
+24/5/2564 6:05:04 : Find Msg : Access
+24/5/2564 6:05:05 : Wait Order : 5000 mSec. 
+24/5/2564 6:05:11 : Wait Order : 5000 mSec. 

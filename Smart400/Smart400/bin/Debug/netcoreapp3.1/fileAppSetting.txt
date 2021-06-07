@@ -1,0 +1,3 @@
+{"LogsAs400Path":"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs",
+"FileNameLogsAs400":"Logs_AS400_Backend_20210527"
+}
