@@ -1,1 +1,1 @@
-{"LogsAs400Path":"/Users/tangkwa/Desktop/lab/smart400/Smart400/Logs","FileNameLogsAs400":"Logs_AS400_Backend_","MessageCheckStatus":"Wait Order : 5000 mSec","CounterChecking":-1,"TimerMinuteCheck":1,"HourCheck":6,"LastUpdate":"2021-06-07T21:22:16.941522+07:00","TextSmart":null}
+{"LogsAs400Path":"/Users/tangkwa/Desktop/lab/smart400/Smart400/Logs","FileNameLogsAs400":"Logs_AS400_Backend_","MessageCheckStatus":"Wait Order : 5000 mSec","CounterChecking":-1,"TimerMinuteCheck":1,"HourCheck":6,"LastUpdate":"2021-06-08T09:59:16.879042+07:00","TextSmart":null}

@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{9852F5A5-65A7-4EF1-8D0A-18582FA03880}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/fileAppSetting.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/Repositories/AppSettingRepository.cs">
     <Files>
-      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="56" Column="19" />
-      <File FileName="Smart400/Services/AppSettingService.cs" />
-      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" />
-      <File FileName="Smart400/fileAppSetting.txt" Line="1" Column="173" />
+      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="78" Column="74" />
+      <File FileName="Smart400/Services/AppSettingService.cs" Line="1" Column="1" />
+      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" Line="1" Column="1" />
+      <File FileName="Smart400/fileAppSetting.txt" Line="1" Column="120" />
       <File FileName="Smart400/Models/AppSettingModel.cs" />
       <File FileName="Smart400/Controllers/HomeController.cs" />
       <File FileName="Smart400/Views/Home/Index.cshtml" />
@@ -20,12 +20,13 @@
               <Node name="ApiControllers" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Repositories" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="AppSettingRepository.cs" selected="True" />
+              </Node>
               <Node name="Services" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
               </Node>
-              <Node name="fileAppSetting.txt" selected="True" />
             </Node>
           </Node>
         </State>
