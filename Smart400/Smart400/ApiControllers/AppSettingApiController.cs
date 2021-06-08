@@ -32,7 +32,7 @@ namespace Smart400.ApiControllers
         //}
 
         [HttpGet()]
-        public IEnumerable<AppSettingModel> Get()
+        public AppSettingModel Get()
         {
             return appSettingService.Get();
         }

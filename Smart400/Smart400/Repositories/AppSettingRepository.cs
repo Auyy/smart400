@@ -46,7 +46,7 @@ namespace Smart400.Repositories
 
         //}
 
-        public IEnumerable<AppSettingModel> Get()
+        public AppSettingModel Get()
         {
             var appSettingFullpath = "fileAppSetting.txt";
             var appSetting = ReadFileAppSetting(appSettingFullpath);
@@ -60,36 +60,38 @@ namespace Smart400.Repositories
             var AppSettingJsonStr = JsonSerializer.Serialize(appSetting);
             File.WriteAllText(appSettingFullpath, AppSettingJsonStr);
 
-                //var lines = File.ReadAllLines(logFile);
+            //var lines = File.ReadAllLines(logFile);
 
-                //var linesReverse = lines.Reverse().ToList();
+            //var linesReverse = lines.Reverse().ToList();
 
-                //var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
+            //var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
 
-                ////health check service as400
+            ////health check service as400
 
-                // var logLines = lastMsg.Split(" : ").ToList();
-                // var logDateStr = logLines.FirstOrDefault();
-                // var logDateTime = DateTime.Parse(logDateStr);
+            // var logLines = lastMsg.Split(" : ").ToList();
+            // var logDateStr = logLines.FirstOrDefault();
+            // var logDateTime = DateTime.Parse(logDateStr);
 
-                // //chaeck alert
-                //  var CurDateTime_healthCheck = DateTime.Now;
+            // //chaeck alert
+            //  var CurDateTime_healthCheck = DateTime.Now;
 
-                //  var diffTime = CurDateTime_healthCheck - logDateTime;
+            //  var diffTime = CurDateTime_healthCheck - logDateTime;
 
             //if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
             //{
-                
-                
+
+
             //}
 
-            return logFile.Select(index => new AppSettingModel
+            var data = ReadFileContent(logFile);
+
+            return  new AppSettingModel
             {
-                TextSmart = File.ReadAllText(logFile)
-            });
+                TextSmart = data
+            };
         }
 
-        private static AppSettingModel ReadFileAppSetting(string filepath)
+        private AppSettingModel ReadFileAppSetting(string filepath)
         {
             //read json appsetting
             if (!File.Exists(filepath))
@@ -105,7 +107,25 @@ namespace Smart400.Repositories
             }
         }
 
+        private IEnumerable<string> ReadFileContent(string filepath)
+        {
+            var texts = new List<string>();
+            //read json appsetting
+            if (!File.Exists(filepath))
+            {
+                return null;
+            }
+            else
+            {
+                string[] lines = System.IO.File.ReadAllLines(filepath);
+                foreach (string line in lines)
+                {
+                    texts.Add(line);
+                }
 
+                return texts;
+            }
+        }
 
     }
 }
