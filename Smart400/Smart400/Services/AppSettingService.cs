@@ -15,9 +15,14 @@ namespace Smart400.Services
             appSettingRepository = new AppSettingRepository();
         }
 
-        public IEnumerable<AppSettingModel> Get()
+        public AppSettingModel Get()
         {
-            return appSettingRepository.Get();
+            var appsetting = appSettingRepository.Get();
+            var reverseTexts = appsetting.TextSmart.Reverse();
+
+            appsetting.TextSmart = reverseTexts;
+
+            return appsetting;
         }
 
        

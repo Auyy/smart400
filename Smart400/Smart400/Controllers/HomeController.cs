@@ -27,8 +27,9 @@ namespace Smart400.Controllers
             //ViewBag.Data = linesReverse;
 
             var appSettingRepository = new AppSettingRepository();
-            var movies = appSettingRepository.Get().Reverse();
-            return View(movies);
+            var appSetting = appSettingRepository.Get();
+
+            return View(appSetting);
            
         }
 

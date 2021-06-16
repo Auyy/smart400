@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Smart400.Models
 {
@@ -12,7 +13,8 @@ namespace Smart400.Models
         public int HourCheck { get; set; }
         public DateTime LastUpdate { get; set; }
 
-        public string TextSmart { get; set; }
+        public IEnumerable<string> TextSmart { get; set; }
+        public IEnumerable<string> Checktext {get; set;}
 
         //public string appSettingFullpath { get; set; }
         //public string appSetting { get; set; }

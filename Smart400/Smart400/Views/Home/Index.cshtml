@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Smart400.Models.AppSettingModel>
+﻿@model Smart400.Models.AppSettingModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -7,22 +7,32 @@
     <thead>
         <tr>
             <th>
-               Smart400
+                Smart400
             </th>
-           
+            @*<th>
+                state
+            </th>*@
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.TextSmart)
         {
-
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TextSmart)
+                    @item
                 </td>
             </tr>
         }
+
+        @*@foreach (var item in Model.Checktext)
+        {
+            <tr>
+                <td>
+                    @item
+                </td>
+            </tr>
+        }*@
     </tbody>
 </table>
 

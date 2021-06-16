@@ -16,37 +16,12 @@ namespace Smart400.Repositories
 
         public AppSettingRepository()
         {
-            
+
         }
 
-        //public string fileContents()
-        //{
-        //    //var models = new AppSettingModel();
-        //    var texts = File.ReadAllLines(@"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt");
-        //    var linesReverse = texts.Reverse().ToList();
 
-        //    return linesReverse;
-        //}
 
-        //public IEnumerable<AppSettingModel> Get()
-        //{
-        //    var texts = @"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt";
-        //    var linesReverse = texts.Reverse().ToList();
-        //    var lastMsg = linesReverse.FirstOrDefault(m => m.Contains("Wait Order : 5000 mSec"));
-
-        //    if (texts == null)
-        //    {
-
-        //    }
-
-        //    return texts.Select(index => new AppSettingModel
-        //    {
-        //        TextSmart = File.ReadAllText(texts)
-        //    });
-
-        //}
-
-        public IEnumerable<AppSettingModel> Get()
+        public AppSettingModel Get()
         {
             var appSettingFullpath = "fileAppSetting.txt";
             var appSetting = ReadFileAppSetting(appSettingFullpath);
@@ -56,40 +31,19 @@ namespace Smart400.Repositories
             var filenameLogToday = $"{appSetting.FileNameLogsAs400}{dateToday}.txt";
             var logFile = Path.Combine(pathFileLog400, filenameLogToday);
 
-            appSetting.LastUpdate = DateTime.Now;
-            var AppSettingJsonStr = JsonSerializer.Serialize(appSetting);
-            File.WriteAllText(appSettingFullpath, AppSettingJsonStr);
+            var data = ReadFileContent(logFile);
+            var check = HealthCheckService400(appSetting, logFile);
+            //var check = "Service AS400 ปกติ";
 
-                //var lines = File.ReadAllLines(logFile);
-
-                //var linesReverse = lines.Reverse().ToList();
-
-                //var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
-
-                ////health check service as400
-
-                // var logLines = lastMsg.Split(" : ").ToList();
-                // var logDateStr = logLines.FirstOrDefault();
-                // var logDateTime = DateTime.Parse(logDateStr);
-
-                // //chaeck alert
-                //  var CurDateTime_healthCheck = DateTime.Now;
-
-                //  var diffTime = CurDateTime_healthCheck - logDateTime;
-
-            //if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
-            //{
-                
-                
-            //}
-
-            return logFile.Select(index => new AppSettingModel
+            return new AppSettingModel
             {
-                TextSmart = File.ReadAllText(logFile)
-            });
+                TextSmart = data,
+                Checktext = check
+            };
         }
 
-        private static AppSettingModel ReadFileAppSetting(string filepath)
+
+        private AppSettingModel ReadFileAppSetting(string filepath)
         {
             //read json appsetting
             if (!File.Exists(filepath))
@@ -105,7 +59,89 @@ namespace Smart400.Repositories
             }
         }
 
+        private IEnumerable<string> ReadFileContent(string filepath)
+        {
+            var texts = new List<string>();
+            //read json appsetting
+            if (!File.Exists(filepath))
+            {
+                return null;
+            }
+            else
+            {
+                string[] lines = System.IO.File.ReadAllLines(filepath);
+                foreach (string line in lines)
+                {
+                    texts.Add(line);
+                }
+                return texts;
+            }
+        }
 
+
+        private IEnumerable<string> HealthCheckService400(AppSettingModel appSetting, string logFile)
+        {
+            var textcheck = new List<string>();
+            var RES_SERVER_RUN = "Service AS400 ปกติ";
+            var RES_SERVER_DOWN = "Smart 400 หยุดทำงาน!!";
+            var RES_SERVER_DOWN2 = "Smart 400 หยุดทำงาน 2";
+            var RES_SERVER_DOWN3 = "Smart 400 หยุดทำงาน 3";
+
+
+
+            if (File.Exists(logFile))
+            {
+                var lines = File.ReadAllLines(logFile);
+                var linesReverse = lines.Reverse().ToList();
+                var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
+
+                if (!string.IsNullOrEmpty(lastMsg))
+                {
+                    var logLines = lastMsg.Split(" : ").ToList();
+                    var logDateStr = logLines.FirstOrDefault();
+                    var logDateTime = DateTime.Parse(logDateStr);
+
+                    //chaeck alert
+                    var CurDateTime_healthCheck = DateTime.Now;
+                    var diffTime = CurDateTime_healthCheck - logDateTime;
+
+                    if (diffTime.Days == 0 && diffTime.Hours == 0 && diffTime.Minutes <= appSetting.TimerMinuteCheck)
+                    {
+                        //server is running
+                        if (appSetting.CounterChecking != 0)
+                        {
+                            //แจ้ง Server กลับมาใช้งานได้ แล้ว Set ค่า CounterChecking =0
+                            appSetting.CounterChecking = 0;
+                        }
+                        else
+                        {
+                            if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
+                            {
+                                textcheck.Add(RES_SERVER_RUN);
+                                return textcheck;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        textcheck.Add(RES_SERVER_DOWN);
+                        return textcheck;
+                    }
+                    return textcheck;
+                }
+                 else
+                 {
+                    textcheck.Add(RES_SERVER_DOWN2);
+                    return textcheck;
+                 }
+            }
+            else
+            {
+                textcheck.Add(RES_SERVER_DOWN3);
+                return textcheck; ;
+            }
+        }  
+                
 
     }
 }
