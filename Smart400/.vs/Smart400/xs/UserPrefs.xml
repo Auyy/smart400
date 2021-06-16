@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{9852F5A5-65A7-4EF1-8D0A-18582FA03880}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/Repositories/AppSettingRepository.cs">
     <Files>
-      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="130" Column="1" />
-      <File FileName="Smart400/Services/AppSettingService.cs" />
-      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" />
-      <File FileName="Smart400/Models/AppSettingModel.cs" />
+      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="135" Column="38" />
+      <File FileName="Smart400/Services/AppSettingService.cs" Line="1" Column="1" />
+      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" Line="1" Column="1" />
+      <File FileName="Smart400/Models/AppSettingModel.cs" Line="11" Column="49" />
       <File FileName="Smart400/Views/Home/Index.cshtml" />
       <File FileName="Smart400/fileAppSetting.txt" />
     </Files>

@@ -14,10 +14,7 @@ namespace Smart400.Models
         public DateTime LastUpdate { get; set; }
 
         public IEnumerable<string> TextSmart { get; set; }
-<<<<<<< HEAD
         public IEnumerable<string> Checktext {get; set;}
-=======
->>>>>>> e35158a0cb4f8dd1cec600aabcdd10b8e15ac1d7
 
         //public string appSettingFullpath { get; set; }
         //public string appSetting { get; set; }

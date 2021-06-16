@@ -31,7 +31,6 @@ namespace Smart400.Repositories
             var filenameLogToday = $"{appSetting.FileNameLogsAs400}{dateToday}.txt";
             var logFile = Path.Combine(pathFileLog400, filenameLogToday);
 
-<<<<<<< HEAD
             var data = ReadFileContent(logFile);
             var check = HealthCheckService400(appSetting, logFile);
             //var check = "Service AS400 ปกติ";
@@ -44,43 +43,6 @@ namespace Smart400.Repositories
         }
 
 
-=======
-            appSetting.LastUpdate = DateTime.Now;
-            var AppSettingJsonStr = JsonSerializer.Serialize(appSetting);
-            File.WriteAllText(appSettingFullpath, AppSettingJsonStr);
-
-            //var lines = File.ReadAllLines(logFile);
-
-            //var linesReverse = lines.Reverse().ToList();
-
-            //var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
-
-            ////health check service as400
-
-            // var logLines = lastMsg.Split(" : ").ToList();
-            // var logDateStr = logLines.FirstOrDefault();
-            // var logDateTime = DateTime.Parse(logDateStr);
-
-            // //chaeck alert
-            //  var CurDateTime_healthCheck = DateTime.Now;
-
-            //  var diffTime = CurDateTime_healthCheck - logDateTime;
-
-            //if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
-            //{
-
-
-            //}
-
-            var data = ReadFileContent(logFile);
-
-            return  new AppSettingModel
-            {
-                TextSmart = data
-            };
-        }
-
->>>>>>> e35158a0cb4f8dd1cec600aabcdd10b8e15ac1d7
         private AppSettingModel ReadFileAppSetting(string filepath)
         {
             //read json appsetting
@@ -112,7 +74,6 @@ namespace Smart400.Repositories
                 {
                     texts.Add(line);
                 }
-<<<<<<< HEAD
                 return texts;
             }
         }
@@ -177,16 +138,10 @@ namespace Smart400.Repositories
             else
             {
                 textcheck.Add(RES_SERVER_DOWN3);
-                return textcheck; ;
+                return textcheck; 
             }
         }  
                 
-=======
-
-                return texts;
-            }
-        }
->>>>>>> e35158a0cb4f8dd1cec600aabcdd10b8e15ac1d7
 
     }
 }
