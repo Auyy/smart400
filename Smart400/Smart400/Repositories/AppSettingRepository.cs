@@ -19,8 +19,6 @@ namespace Smart400.Repositories
 
         }
 
-
-
         public AppSettingModel Get()
         {
             var appSettingFullpath = "fileAppSetting.txt";
@@ -87,8 +85,6 @@ namespace Smart400.Repositories
             var RES_SERVER_DOWN2 = "Smart 400 หยุดทำงาน 2";
             var RES_SERVER_DOWN3 = "Smart 400 หยุดทำงาน 3";
 
-
-
             if (File.Exists(logFile))
             {
                 var lines = File.ReadAllLines(logFile);
@@ -107,19 +103,14 @@ namespace Smart400.Repositories
 
                     if (diffTime.Days == 0 && diffTime.Hours == 0 && diffTime.Minutes <= appSetting.TimerMinuteCheck)
                     {
-                        //server is running
-                        if (appSetting.CounterChecking != 0)
+                        if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
                         {
-                            //แจ้ง Server กลับมาใช้งานได้ แล้ว Set ค่า CounterChecking =0
-                            appSetting.CounterChecking = 0;
+                            textcheck.Add(RES_SERVER_RUN);
+                            return textcheck;
                         }
                         else
                         {
-                            if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
-                            {
-                                textcheck.Add(RES_SERVER_RUN);
-                                return textcheck;
-                            }
+                            return textcheck;
                         }
                     }
                     else
@@ -127,7 +118,6 @@ namespace Smart400.Repositories
                         textcheck.Add(RES_SERVER_DOWN);
                         return textcheck;
                     }
-                    return textcheck;
                 }
                  else
                  {
@@ -140,8 +130,8 @@ namespace Smart400.Repositories
                 textcheck.Add(RES_SERVER_DOWN3);
                 return textcheck; 
             }
-        }  
-                
+
+        }
 
     }
 }
