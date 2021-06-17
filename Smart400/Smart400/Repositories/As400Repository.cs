@@ -1,60 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Smart400.Models;
 
 namespace Smart400.Repositories
 {
-    public class AppSettingRepository
+    public interface IAs400Repository
+    {
+        As400Response Get();
+    }
+
+    public class As400Repository : IAs400Repository
     {
         //private string fileContents = File.ReadAllText(@"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt");
 
-        public AppSettingRepository()
+        private IConfiguration configuration;
+        public As400Repository(IConfiguration configuration)
         {
-
+            this.configuration = configuration;
         }
 
-        public AppSettingModel Get()
+        public As400Response Get()
         {
-            var appSettingFullpath = "fileAppSetting.txt";
-            var appSetting = ReadFileAppSetting(appSettingFullpath);
             //var curCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
             var dateToday = DateTime.Now.ToString("yyyyMMdd");
-            var pathFileLog400 = appSetting.LogsAs400Path;
-            var filenameLogToday = $"{appSetting.FileNameLogsAs400}{dateToday}.txt";
+
+            var pathFileLog400 = configuration.GetSection("ModelSetting:LogsAs400Path").Value;
+            var fileNameLogs = configuration.GetSection("ModelSetting:FileNameLogsAs400").Value;
+            var filenameLogToday = $"{fileNameLogs}{dateToday}.txt";
             var logFile = Path.Combine(pathFileLog400, filenameLogToday);
 
             var data = ReadFileContent(logFile);
-            var check = HealthCheckService400(appSetting, logFile);
+            var check = HealthCheckService400(logFile);
             //var check = "Service AS400 ปกติ";
 
-            return new AppSettingModel
+            return new As400Response
             {
+                LastUpdate = DateTime.Now,
                 TextSmart = data,
                 Checktext = check
             };
-        }
-
-
-        private AppSettingModel ReadFileAppSetting(string filepath)
-        {
-            //read json appsetting
-            if (!File.Exists(filepath))
-            {
-                return null;
-            }
-            else
-            {
-                var texts = File.ReadAllText(filepath);
-
-                var model = JsonSerializer.Deserialize<AppSettingModel>(texts);
-                return model;
-            }
         }
 
         private IEnumerable<string> ReadFileContent(string filepath)
@@ -77,19 +69,21 @@ namespace Smart400.Repositories
         }
 
 
-        private IEnumerable<string> HealthCheckService400(AppSettingModel appSetting, string logFile)
+        private string HealthCheckService400(string logFile)
         {
-            var textcheck = new List<string>();
             var RES_SERVER_RUN = "Service AS400 ปกติ";
             var RES_SERVER_DOWN = "Smart 400 หยุดทำงาน!!";
             var RES_SERVER_DOWN2 = "Smart 400 หยุดทำงาน 2";
             var RES_SERVER_DOWN3 = "Smart 400 หยุดทำงาน 3";
 
+            var messageCheckStatus = configuration.GetSection("ModelSetting:MessageCheckStatus").Value;
+            var timerMinuteCheck = int.Parse(configuration.GetSection("ModelSetting:TimerMinuteCheck").Value);
+
             if (File.Exists(logFile))
             {
                 var lines = File.ReadAllLines(logFile);
                 var linesReverse = lines.Reverse().ToList();
-                var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(appSetting.MessageCheckStatus));
+                var lastMsg = linesReverse.FirstOrDefault(m => m.Contains(messageCheckStatus));
 
                 if (!string.IsNullOrEmpty(lastMsg))
                 {
@@ -101,34 +95,23 @@ namespace Smart400.Repositories
                     var CurDateTime_healthCheck = DateTime.Now;
                     var diffTime = CurDateTime_healthCheck - logDateTime;
 
-                    if (diffTime.Days == 0 && diffTime.Hours == 0 && diffTime.Minutes <= appSetting.TimerMinuteCheck)
+                    if (diffTime.Days == 0 && diffTime.Hours == 0 && diffTime.Minutes <= timerMinuteCheck)
                     {
-                        if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
-                        {
-                            textcheck.Add(RES_SERVER_RUN);
-                            return textcheck;
-                        }
-                        else
-                        {
-                            return textcheck;
-                        }
+                            return RES_SERVER_RUN;
                     }
                     else
                     {
-                        textcheck.Add(RES_SERVER_DOWN);
-                        return textcheck;
+                        return RES_SERVER_DOWN;
                     }
                 }
                  else
                  {
-                    textcheck.Add(RES_SERVER_DOWN2);
-                    return textcheck;
+                    return RES_SERVER_DOWN2;
                  }
             }
             else
             {
-                textcheck.Add(RES_SERVER_DOWN3);
-                return textcheck; 
+                return RES_SERVER_DOWN3; 
             }
 
         }

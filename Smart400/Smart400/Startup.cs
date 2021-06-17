@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Smart400.Repositories;
+using Smart400.Services;
 
 namespace Smart400
 {
@@ -28,6 +29,9 @@ namespace Smart400
 
             //swagger
             services.AddSwaggerGen();
+
+            services.AddSingleton<IAs400Repository, As400Repository>();
+            services.AddSingleton<IAs400Service, As400Service>();
         }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
