@@ -112,6 +112,7 @@ namespace Smart400.Repositories
                         }
                         else
                         {
+                            textcheck.Add(RES_SERVER_DOWN);
                             return textcheck;
                         }
                     }
