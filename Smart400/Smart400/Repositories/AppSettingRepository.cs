@@ -19,6 +19,8 @@ namespace Smart400.Repositories
 
         }
 
+
+
         public AppSettingModel Get()
         {
             var appSettingFullpath = "fileAppSetting.txt";
@@ -82,8 +84,7 @@ namespace Smart400.Repositories
             var textcheck = new List<string>();
             var RES_SERVER_RUN = "Service AS400 ปกติ";
             var RES_SERVER_DOWN = "Smart 400 หยุดทำงาน!!";
-            var RES_SERVER_DOWN2 = "Smart 400 หยุดทำงาน 2";
-            var RES_SERVER_DOWN3 = "Smart 400 หยุดทำงาน 3";
+
 
             if (File.Exists(logFile))
             {
@@ -101,6 +102,7 @@ namespace Smart400.Repositories
                     var CurDateTime_healthCheck = DateTime.Now;
                     var diffTime = CurDateTime_healthCheck - logDateTime;
 
+                    // check in https://localhost:5001/swagger/index.html
                     if (diffTime.Days == 0 && diffTime.Hours == 0 && diffTime.Minutes <= appSetting.TimerMinuteCheck)
                     {
                         if (CurDateTime_healthCheck.Hour % appSetting.HourCheck == 0 && CurDateTime_healthCheck.Minute <= 5)
@@ -119,19 +121,20 @@ namespace Smart400.Repositories
                         return textcheck;
                     }
                 }
-                 else
-                 {
-                    textcheck.Add(RES_SERVER_DOWN2);
+                else
+                {
+                    textcheck.Add(RES_SERVER_DOWN);
                     return textcheck;
-                 }
+                }
             }
             else
             {
-                textcheck.Add(RES_SERVER_DOWN3);
-                return textcheck; 
+                textcheck.Add(RES_SERVER_DOWN);
+                return textcheck;
             }
 
         }
+
 
     }
 }
