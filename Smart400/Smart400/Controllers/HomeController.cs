@@ -4,30 +4,28 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Smart400.Models;
 using Smart400.Repositories;
+using Smart400.Services;
 
 namespace Smart400.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IAs400Service as400Service;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IAs400Service as400Service)
         {
             _logger = logger;
+            this.as400Service = as400Service;
         }
 
         public IActionResult Index()
         {
-
-            //    var texts = System.IO.File.ReadAllLines(@"/Users/tangkwa/Desktop/AS400Status/Smart400/Logs/Logs_AS400_Backend_20210606.txt");
-            //    var linesReverse = texts.Reverse().ToList();
-            //ViewBag.Data = linesReverse;
-
-            var appSettingRepository = new AppSettingRepository();
-            var appSetting = appSettingRepository.Get();
+            var appSetting = as400Service.GetStatus();
 
             return View(appSetting);
            

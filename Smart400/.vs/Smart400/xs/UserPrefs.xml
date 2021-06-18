@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{9852F5A5-65A7-4EF1-8D0A-18582FA03880}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/Repositories/AppSettingRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Smart400/appsettings.json">
     <Files>
-      <File FileName="Smart400/Repositories/AppSettingRepository.cs" Line="116" Column="46" />
-      <File FileName="Smart400/Services/AppSettingService.cs" />
-      <File FileName="Smart400/ApiControllers/AppSettingApiController.cs" />
-      <File FileName="Smart400/Models/AppSettingModel.cs" />
-      <File FileName="Smart400/Views/Home/Index.cshtml" />
-      <File FileName="Smart400/fileAppSetting.txt" />
+      <File FileName="Smart400/Repositories/As400Repository.cs" Line="84" Column="16" />
+      <File FileName="Smart400/Services/As400Service.cs" Line="52" Column="15" />
+      <File FileName="Smart400/appsettings.json" Line="10" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,13 +14,12 @@
               <Node name="ApiControllers" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Repositories" expanded="True">
-                <Node name="AppSettingRepository.cs" selected="True" />
-              </Node>
+              <Node name="Repositories" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
               </Node>
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

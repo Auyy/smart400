@@ -1,1 +1,0 @@
-{"LogsAs400Path":"/Users/tangkwa/Desktop/smart400-main-2/Smart400/Logs","FileNameLogsAs400":"Logs_AS400_Backend_","MessageCheckStatus":"Wait Order : 5000 mSec","CounterChecking":-1,"TimerMinuteCheck":1,"HourCheck":6,"LastUpdate":"2021-06-08T20:19:42.429645+07:00","TextSmart":null}
