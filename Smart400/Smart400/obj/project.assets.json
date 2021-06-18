@@ -772,7 +772,6 @@
         }
       },
       "System.Security.Cryptography.ProtectedData/5.0.0": {
-<<<<<<< HEAD
         "type": "package",
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -803,38 +802,6 @@
       "System.Security.Principal.Windows/5.0.0": {
         "type": "package",
         "compile": {
-=======
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Permissions/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Windows.Extensions": "5.0.0"
-        },
-        "compile": {
-          "ref/netcoreapp3.0/System.Security.Permissions.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/5.0.0": {
-        "type": "package",
-        "compile": {
->>>>>>> 91434146b6931377e8c66cace70b249a95efc6d6
           "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
@@ -2435,42 +2402,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\11316684\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/tangkwa/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "/Users/tangkwa/Desktop/Smart400/Smart400/Smart400.csproj",
       "projectName": "Smart400",
       "projectPath": "/Users/tangkwa/Desktop/Smart400/Smart400/Smart400.csproj",
       "packagesPath": "/Users/tangkwa/.nuget/packages/",
       "outputPath": "/Users/tangkwa/Desktop/Smart400/Smart400/obj/",
-=======
-      "projectUniqueName": "D:\\WorkingSpace\\NTL\\Intership\\smart400\\Smart400\\Smart400\\Smart400.csproj",
-      "projectName": "Smart400",
-      "projectPath": "D:\\WorkingSpace\\NTL\\Intership\\smart400\\Smart400\\Smart400\\Smart400.csproj",
-      "packagesPath": "C:\\Users\\11316684\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkingSpace\\NTL\\Intership\\smart400\\Smart400\\Smart400\\obj\\",
->>>>>>> 91434146b6931377e8c66cace70b249a95efc6d6
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\11316684\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/tangkwa/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -2482,6 +2436,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -2528,7 +2483,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
